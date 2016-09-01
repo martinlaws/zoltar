@@ -1,0 +1,16 @@
+<form action="/donate" method="post">
+  <label for="text">Text</label>
+  <input id="text" name="text" type="text">
+
+  <label for="photo_url">Photo URL</label>
+  <input id="photo_url" name="photo_url" type="text">
+
+  <label for="category">Category</label>
+  <select name="category">
+    <% @categories.each do |category| %>
+      <option ><%= category.title %></option>
+    <% end %>
+  </select>
+
+  <button type="submit">Submit!</button>
+</form>

@@ -1,0 +1,13 @@
+<h1 class="fun-font">Ask Me a Question</h1>
+
+<img class="zoltar" src="http://www.patwalton.com/images/20100709232014_zoltarlr_9746.jpg" alt="ZOLTAR, duh!">
+
+<form action="/ask" method="post">
+  <select name="category">
+    <% @categories.each do |category| %>
+      <option><%= category.title %></option>
+    <% end %>
+  </select>
+
+  <button type="submit" class="fun-font">Ask!!</button>
+</form>
