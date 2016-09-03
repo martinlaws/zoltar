@@ -5,7 +5,7 @@ class CreateCategoriesTable < ActiveRecord::Migration
       column.text :title
     end
 
-    remove_column :responses, :category, :string
+    remove_column :responses, :category, :text
     add_column :responses, :category_id, :integer
   end
 

@@ -5,7 +5,7 @@ class CreateBaseTables < ActiveRecord::Migration
       column.text :content
       column.text :photo_url
       column.text :category
-      column.timestamps, null: false
+      column.timestamps
     end
   end
 
