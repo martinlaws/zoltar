@@ -10,19 +10,13 @@ get '/ask' do
 end
 
 post '/ask' do
-
   category = Category.find_by(title: params[:category])
 
   responses_in_category = Response.where(category_id: category.id)
-  # number_of_responses_in_category = (responses_in_category.length)
-  # random_number = rand(number_of_responses_in_category)
+  number_of_responses_in_category = (responses_in_category.length)
+  random_number = rand(number_of_responses_in_category)
 
-  # puts "================== #{random_number}"
-  puts "================== #{responses_in_category.inspect}"
-
-  @found_response = responses_in_category.first
-
-  puts "================== #{@found_response.inspect}"
+  @found_response = responses_in_category[random_number]
 
   erb :answer
 end
